@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: calculatorapp
+    env: dotnet
+    plan: free
+    buildCommand: "dotnet publish CalculatorApp.csproj -c Release -o out"
+    startCommand: "dotnet out/CalculatorApp.dll"
+    branch: main
