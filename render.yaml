@@ -1,8 +1,10 @@
 services:
   - type: web
-    name: calculatorapp
-    env: dotnet
+    name: calculator-app
+    runtime: docker
+    repo: https://github.com/Gregory-123-coder/dotnet-demo
     plan: free
-    buildCommand: "dotnet publish CalculatorApp.csproj -c Release -o out"
-    startCommand: "dotnet out/CalculatorApp.dll"
+    region: oregon
     branch: main
+    dockerfilePath: Dockerfile
+    autoDeploy: true
